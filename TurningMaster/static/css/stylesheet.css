@@ -1,0 +1,277 @@
+
+
+.back-Ap{
+    background: url(верхний фон.png);
+    position: absolute;
+    width: 1440px;
+    height: 226px;
+    left: 0px;
+    top: 0px;
+}
+.cnc{
+    background: url(cnc.png);
+    position: absolute;
+    width: 393px;
+    height: 151px;
+    left: 14px;
+    top: 0px;
+}
+.program{
+    background: url(программа.png);
+    position: absolute;
+    width: 393px;
+    height: 75px;
+    left: 14px;
+    top: 142px;
+}
+
+.back-Main{
+    position: absolute;
+    width: 1440px;
+    height: 627px;
+    left: 0px;
+    top: 226px;
+    background: url(общий фон.png);
+    border: 1px solid #000000;
+}
+.back-Left{
+    width: 270px;
+    height: 627px;
+    left: 0px;
+    top: 226px;
+    background: url(левый фон.png);
+    border: 1px solid #000000;
+}
+.back-Down{
+    position: absolute;
+    width: 1440px;
+    height: 172px;
+    left: 0px;
+    top: 852px;
+    background: #7F8482;
+}
+.master{
+    /* Токарный мастер */
+    position: absolute;
+    width: 645px;
+    height: 91px;
+    left: 470px;
+    top: 38px;
+
+    font-family: 'Inika'; #подгрузить шрифт
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 129.69%;
+
+    color: #C4A817;
+    -webkit-text-stroke: 2px #000000;
+    text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.45);
+}
+.main-button{
+    position: absolute;
+    width: 130px;
+    height: 39px;
+    left: 527px;
+    top: 160px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #000000;
+
+    position: absolute;
+    width: 245px;
+    height: 57px;
+    left: 470px;
+    top: 151px;
+
+    background: #97CEB4;
+    box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+.reg-button{
+    position: absolute;
+    width: 207px;
+    height: 39px;
+    left: 1192px;
+    top: 69px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #000000;
+
+    position: absolute;
+    width: 237px;
+    height: 60px;
+    left: 1177px;
+    top: 64px;
+
+    background: #97CEB4;
+    box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+
+.vhod-button{
+    position: absolute;
+    width: 96px;
+    height: 39px;
+    left: 1248px;
+    top: 160px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+    text-align: center;
+    color: #000000;
+    position: absolute;
+    width: 189px;
+    height: 61px;
+    left: 1201px;
+    top: 151px;
+
+    background: linear-gradient(180deg, rgba(206, 215, 218, 0.98) 34%, rgba(217, 217, 217, 0) 100%);
+    filter: drop-shadow(3px 6px 4px rgba(0, 0, 0, 0.7));
+    border-radius: 20px;
+}
+
+.left-button1{
+/* Каталог токарного инструмента */
+
+position: absolute;
+width: 138px;
+height: 39px;
+left: 71px;
+top: 273px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #000000;
+
+/* Rectangle 2 */
+position: absolute;
+width: 235px;
+height: 58px;
+left: 16px;
+top: 272px;
+filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.4));
+}
+
+.left-button2{
+/* Полезная информация */
+position: absolute;
+width: 168px;
+height: 19px;
+left: 56px;
+top: 363px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #000000;
+
+/* Rectangle 3 */
+position: absolute;
+width: 235px;
+height: 57px;
+left: 16px;
+top: 354px;
+filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.4));
+}
+
+.left-button3{
+/* Rectangle 4 */
+position: absolute;
+width: 235px;
+height: 57px;
+left: 15px;
+top: 435px;
+filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.4));
+
+/* Способы обработки сложных деталей */
+position: absolute;
+width: 165px;
+height: 38px;
+left: 50.99px;
+top: 445px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #000000;
+}
+
+.left-button4{
+/* Наладка станка с ЧПУ */
+position: absolute;
+width: 131px;
+height: 38px;
+left: 68.99px;
+top: 526px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #000000;
+
+/* Rectangle 5 */
+position: absolute;
+width: 235px;
+height: 57px;
+left: 16px;
+top: 516px;
+filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.4));
+}
+
+.left-button5{
+/* Справочная информация */
+position: absolute;
+width: 185px;
+height: 19px;
+left: 41px;
+top: 605px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #000000;
+
+/* Rectangle 6 */
+position: absolute;
+width: 235px;
+height: 58px;
+left: 15px;
+top: 596px;
+filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.4));
+}
+
+
