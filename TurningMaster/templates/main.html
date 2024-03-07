@@ -1,45 +1,75 @@
-{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html lang="en" >
+
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
     <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 
 </head>
+<style></style>
+<header class="back-Ap" style="background-image: url({% static 'img/верхний фон.png' %})">
 
-<header >
-    <div class="back-Ap" style="background-image: url({% static 'img/верхний фон.png' %})" >
-        <p class="master">Токарный мастер</p>
+        <small class="master" >Токарный мастер</small>
+    <form method = "post" action="{% url 'main' %}">
+        {% csrf_token %}
         <button class="main-button" type="submit">Главная</button>
-
-        <img class="cnc" src="{% static 'img/cnc.png' %}">
-        <img class="program" src="{% static 'img/программа.png' %}">
-
-        <button class="reg-button" type="submit">Регистрация</button>
-        <button class="vhod-button" type="submit">Вход</button>
+    </form>
+    <div>
+        <img class="cnc" src="{% static 'img/cnc.png' %}" alt="cnc" >
+        <img class="program"  src="{% static 'img/программа.png' %}" alt="program">
     </div>
+
+
+    <form method = "post" action="{% url 'reg' %}">
+        {% csrf_token %}
+        <button class="reg-button" type="submit">Регистрация</button>
+    </form>
+    <form method = "post" action="{% url 'enter' %}">
+        {% csrf_token %}
+        <button class="vhod-button" type="submit">Вход</button>
+    </form>
+
 
 </header>
 
 <body >
     <div class="back-Main" style="background-image: url({% static 'img/общий фон.png' %})">
-    <div class="back-Left" style="background-image: url({% static 'img/левый фон.png' %})">
+        <div class="back-Left" style="background-image: url({% static 'img/левый фон.png' %})">
 
-        <button class="left-button1" type="submit">Каталог токарного инструмента</button>
-        <button class="left-button2" type="submit">Полезная информация</button>
-        <button class="left-button3" type="submit">Способы обработки сложных деталей</button>
-        <button class="left-button4" type="submit">Наладка станка с ЧПУ</button>
-        <button class="left-button5" type="submit">Справочная информация</button>
+            <form method = "post" action="{% url 'catalog' %}">
+                {% csrf_token %}
+                <button class="left-button1" type="submit">Каталог токарного инструмента</button>
+            </form>
+            <form method = "post" action="{% url 'info' %}">
+                {% csrf_token %}
+                <button class="left-button2" type="submit">Полезная информация</button>
+            </form>
+            <form method = "post" action="{% url 'process' %}">
+                {% csrf_token %}
+                <button class="left-button3" type="submit">Способы обработки сложных деталей</button>
+            </form>
+            <form method = "post" action="{% url 'machine' %}">
+                {% csrf_token %}
+                <button class="left-button4" type="submit">Наладка станка с ЧПУ</button>
+            </form>
+            <form method = "post" action="{% url 'guide' %}">
+                {% csrf_token %}
+                <button class="left-button5" type="submit">Справочная информация</button>
+            </form>
 
-    </div>
+        </div>
     </div>
 
 </body>
 
 <footer>
     <div class="back-Down" style="background-image: url({% static 'img/нижний фон.png' %})">
-
+        <img class="sign-down" src="{% static 'img/sign-down.png' %}" alt="sign" >
+        <p >Токарный мастер</p>
+        <p>Политика конфиденциальности</p>
     </div>
 </footer>
 </html>
