@@ -19,6 +19,7 @@ def machine(request):
     return render(request,'machine.html',)
 def guide(request):
     return render(request,'guide.html',)
+
 def isValidForms(request):
     if request.method == "POST":
         registration = Registration(request.POST)
@@ -26,3 +27,5 @@ def isValidForms(request):
             return render(request, "main.html")
         else:
             return render(request, "reg.html", {'form': Registration})
+def politics(request):
+    return render(request,'politics.html',)

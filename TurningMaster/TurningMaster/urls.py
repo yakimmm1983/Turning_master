@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myMaster.views import main,mainRedirect,reg,enter,catalog,info,process,machine,guide
+from myMaster.views import main,mainRedirect,reg,enter,catalog,info,process,machine,guide,politics
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',main),
@@ -28,4 +28,5 @@ urlpatterns = [
     path('process/',process,name='process'),
     path('machine/',machine,name='machine'),
     path('guide/',guide,name='guide'),
+    path('politics/',politics,name='politics'),
 ]
