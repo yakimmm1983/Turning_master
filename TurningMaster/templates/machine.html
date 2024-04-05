@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MachineCNC</title>
+    <title>Наладка ЧПУ</title>
+    <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 </head>
 <body>
-    <h1>Наладка станка с ЧПУ</h1>
+    {% include "Secondmain.html" %}
+
+    <img class="machineCNC" src="{% static 'img/MachineCNC.png'%}" >
 </body>
 </html>

@@ -1,0 +1,27 @@
+
+
+
+{% load static %}
+<header class="back-Ap" style="background-image: url({% static 'img/верхний фон.png' %})">
+
+    <img class="master" src="{% static 'img/Turning master.png' %}" alt="Turning master" >
+
+    <form method = "post" action="{% url 'main' %}">
+        {% csrf_token %}
+        <button class="main-button" type="submit">Главная</button>
+    </form>
+    <div>
+        <img class="cnc" src="{% static 'img/cnc.png' %}" alt="cnc" >
+
+    </div>
+
+    <form method = "post" action="{% url 'reg' %}">
+        {% csrf_token %}
+        <button class="reg-button" type="submit">Регистрация</button>
+    </form>
+    <form method = "post" action="{% url 'enter' %}">
+        {% csrf_token %}
+        <button class="vhod-button" type="submit">Вход</button>
+    </form>
+
+</header>

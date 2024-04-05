@@ -1,12 +1,35 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catalog</title>
+    <title>Каталог инструмента</title>
+    <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 </head>
-<body>
-<h1>Список</h1>
 
+{% include "Secondmain.html" %}
 
-</body>
-</html>
+<table class="cutterTable">
+    <tr>
+        <th class="title">Круглый резец правый</th>
+        <th class="title">Нейтральный резец</th>
+        <th class="title">Отрезной резец правый</th>
+    </tr>
+    <tr>
+        <td ><img src="{% static 'img/crugliy.png' %}" alt="round cutter"></td>
+        <td><img src="{% static 'img/neitral.png' %}" alt="neutral cutter"></td>
+        <td><img src="{% static 'img/otreznoi.png' %}" alt="cutting cutter"></td>
+    </tr>
+    <tr>
+        <th class="title">Проходной резец правый</th>
+        <th class="title">Расточной резец правый</th>
+        <th class="title">Резьбовой резец правый</th>
+    </tr>
+
+    <tr>
+        <td><img src="{% static 'img/prohodnoi.png' %}" alt="through-hole cutter"></td>
+        <td><img src="{% static 'img/rastochoi.png' %}" alt="boring tool"></td>
+        <td><img src="{% static 'img/rezba.png' %}" alt="threaded cutter"></td>
+    </tr>
+
+</table>

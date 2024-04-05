@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Guide</title>
+    <title>Словарь</title>
+    <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 </head>
 <body>
-    <h1>Справочник</h1>
+    {% include "Secondmain.html" %}
+
+    <img class="guide" src="{% static 'img/Guide.png' %}">
 </body>
 </html>

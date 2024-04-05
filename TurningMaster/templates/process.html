@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Process</title>
+    <title>Способы обработки</title>
+    <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 </head>
 <body>
-    <h1>Технология обработки</h1>
+    {% include "Secondmain.html" %}
+
+    <img class="process" src="{% static 'img/Process.png' %}">
+
 </body>
 </html>
