@@ -10,7 +10,7 @@ class Registration(forms.Form):
     dateBirth = forms.DateField(label='Дата рождения')
     password1 = forms.CharField(label='Пароль',max_length=10,
                                 widget=forms.PasswordInput,
-                                help_text='Используйте не более 8 символов')
+                                help_text='Используйте не более 8 символов,формат записи Д.М.Г')
     password2 = forms.CharField(label='Повторить пароль',widget=forms.PasswordInput,
                                 max_length=10)
 

@@ -8,12 +8,9 @@
     <h3>Регистрация пользователя:</h3>
     <form method = "post" action="{% url 'main' %}">
         {% csrf_token %}
-
         <div>
-
         {{ form.as_p }}
         </div>
-
         <button type="submit">Регистрация</button>
     </form>
 </body>

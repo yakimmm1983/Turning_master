@@ -1,3 +1,5 @@
 from django.contrib import admin
+from myMaster.models import *
 
-# Register your models here.
+admin.site.register(regUser)
+admin.site.register(textPage)
