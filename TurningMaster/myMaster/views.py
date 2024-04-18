@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import Registration,Enter
 from myMaster.services.registrService import CreateUser as GetUsersAll
-from myMaster.services.contentServices import SaveText
+from myMaster.services.contentServices import GetAllText
 from myMaster.models import textPage
 
 def main(request):
@@ -9,6 +9,15 @@ def main(request):
 def mainRedirect(request):
     return render(request,'main.html',)
 def reg(request):
+    if request.method == 'POST':
+        nickname = request.POST.get('nickname')
+        birthday = request.POST.get('birthday')
+        if Registration.password1 == Registration.password2:
+            password = request.POST.get('password')
+        else:
+            print("Пароль не совпадает")
+        GetUsersAll(nickname,birthday,password)
+        return redirect('main')
     registration = Registration()
     return render(request,'reg.html', {"form":registration})
 def enter(request):
@@ -47,7 +56,6 @@ def CreateUser(request):
     return redirect('main')
 
 def GetAllImg(request,img,text):
-    text = SaveText(text,img)
-    img = textPage.objects.all(img = img.id)
-    return render(request,'catalog.html',{'text':text,'img':img})
+    img = GetAllText()
+    return render(request,'catalog.html',{'img':img})
 

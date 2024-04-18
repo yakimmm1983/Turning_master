@@ -29,4 +29,5 @@ urlpatterns = [
     path('machine/',machine,name='machine'),
     path('guide/',guide,name='guide'),
     path('politics/',politics,name='politics'),
+
 ]
