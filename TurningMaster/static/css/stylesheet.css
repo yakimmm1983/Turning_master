@@ -1,15 +1,15 @@
 
 .text{
-position: absolute;
-left: 500px;
-top: 100px;
-font-size:50px;
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    font-size:50px;
 }
 .text22{
-position: absolute;
-left: 500px;
-top: 150px;
-font-size:40px;
+    position: absolute;
+    left: 500px;
+    top: 150px;
+    font-size:40px;
 }
 .back-Ap{
     position: relative;
@@ -132,7 +132,7 @@ font-size:40px;
     border-radius: 20px;
 }
 .left-button1:hover{
-background: #E6E6E6;
+    background: #E6E6E6;
 }
 .left-button2{
     position: absolute;
@@ -151,7 +151,7 @@ background: #E6E6E6;
     border-radius: 20px
 }
 .left-button2:hover{
-background: #E6E6E6;
+    background: #E6E6E6;
 }
 .left-button3{
     position: absolute;
@@ -170,7 +170,7 @@ background: #E6E6E6;
     border-radius: 20px
 }
 .left-button3:hover{
-background: #E6E6E6;
+    background: #E6E6E6;
 }
 .left-button4{
     position: absolute;
@@ -189,7 +189,7 @@ background: #E6E6E6;
     border-radius: 20px
 }
 .left-button4:hover{
-background: #E6E6E6;
+    background: #E6E6E6;
 }
 .left-button5{
     position: absolute;
@@ -242,32 +242,52 @@ background: #E6E6E6;
     color:white;
 }
 .cutterTable{
-width:auto;
-position: absolute;
-top: 300px; left: 350px;
+    width:auto;
+    position: absolute;
+    top: 300px; left: 350px;
 }
 .th,td{
-padding-left: 20px;
-padding-bottom: 60px;
-text-align: center;
+    padding-left: 20px;
+    padding-bottom: 60px;
+    text-align: center;
 }
 .process{
-position: absolute;
-top:238px;left: 500px;
-width: 455px;
+    position: absolute;
+    top:238px;left: 500px;
+    width: 455px;
 }
 .guide{
-position: absolute;
-top:250px;left: 500px;
-width: 600px;
+    position: absolute;
+    top:250px;left: 500px;
+    width: 600px;
 }
 .machineCNC{
-position: absolute;
-top:330px;left: 500px;
-width: 700px;
+    position: absolute;
+    top:330px;left: 500px;
+    width: 700px;
 }
 .info{
-position: absolute;
-top:240px;left: 400px;
-width: 830px;
+    position: absolute;
+    top:240px;left: 400px;
+    width: 830px;
+}
+.createUser{
+    position: relative;
+    left: 50px;
+    top: 100px;
+}
+.returnMain{
+    position: relative;
+    left: 300px;
+    top: 110px;
+    height: 50px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+
+    background: rgb(119,122,121);
+    background: linear-gradient(180deg, rgba(119,122,121,0.6) 0%, rgba(165,175,170,0) 62%);
+    box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20px
 }

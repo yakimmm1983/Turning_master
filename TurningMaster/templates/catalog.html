@@ -13,12 +13,13 @@
     <tr>
         <th class="title">Круглый резец правый</th>
         <th class="title">Нейтральный резец</th>
-        <th class="title">{{ textPage.text.id }}</th>
+        <th class="title">Отрезной резец правый</th>
     </tr>
+    {% for picture in pictures %}
     <tr>
         <td ><img src="{% static 'img/crugliy.png' %}" alt="round cutter"></td>
         <td><img src="{% static 'img/neitral.png' %}" alt="neutral cutter"></td>
-        <td>{{ textPage.img }}</td>
+        <td>{{ picture.img }}</td>
     </tr>
     <tr>
         <th class="title">Проходной резец правый</th>

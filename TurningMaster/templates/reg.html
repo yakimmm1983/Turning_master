@@ -6,7 +6,7 @@
 </head>
 <body>
     <h3>Регистрация пользователя:</h3>
-    <form method = "post">
+    <form method = "post" action="{% url 'createUser' %}">
         {% csrf_token %}
         <div>
         {{ form.as_p }}

@@ -8,16 +8,16 @@ def main(request):
     return render(request,'main.html',)
 def mainRedirect(request):
     return render(request,'main.html',)
-def reg(request):
-    if request.method == 'POST':
-        nickname = request.POST.get('nickname')
-        birthday = request.POST.get('birthday')
-        if Registration.password1 == Registration.password2:
-            password = request.POST.get('password')
-        else:
-            print("Пароль не совпадает")
-        GetUsersAll(nickname,birthday,password)
-        return redirect('main')
+def reg(request):                                      #переход на страницу формы регистрации
+    # if request.method == 'POST':
+    #     nickname = request.POST.get('nickname')
+    #     birthday = request.POST.get('birthday')
+    #     if Registration.password1 == Registration.password2:
+    #         password = request.POST.get('password')
+    #     else:
+    #         print("Пароль не совпадает")
+    #     GetUsersAll(nickname,birthday,password)
+    #     return redirect('main')
     registration = Registration()
     return render(request,'reg.html', {"form":registration})
 def enter(request):
@@ -33,6 +33,7 @@ def machine(request):
     return render(request,'machine.html',)
 def guide(request):
     return render(request,'guide.html',)
+
 
 def isValidForms(request):
     if request.method == "POST":
@@ -53,9 +54,15 @@ def CreateUser(request):
         else:
             print("Пароль не совпадает")
         GetUsersAll(nickname,birthday,password)
-    return redirect('main')
+    return render(request,'CreateUser.html',)
 
-def GetAllImg(request,img,text):
+
+def GetAllImg(request):
     img = GetAllText()
-    return render(request,'catalog.html',{'img':img})
+    pictures = []
+    for item in pictures(img):
+        pictures.append(item)
+        return pictures
+
+    return render(request,'catalog.html',{'pictures':pictures})
 
