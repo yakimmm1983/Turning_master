@@ -6,12 +6,13 @@
 </head>
 <body>
     <h3>Регистрация пользователя:</h3>
-    <form method = "post" action="{% url 'createUser' %}">
+    <form method = "post" >
         {% csrf_token %}
         <div>
         {{ form.as_p }}
         </div>
         <button type="submit">Регистрация</button>
     </form>
+{{ message }}
 </body>
 </html>

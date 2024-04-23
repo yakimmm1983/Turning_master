@@ -9,9 +9,10 @@
 <body>
 
     <h1 class="createUser">Регистрация прошла успешно.</h1>
-    <form method = "post" action="{% url 'main' %}">
+    <form method = "post" >
         {% csrf_token %}
         <button class="returnMain" type="submit">Перейти на главную</button>
     </form>
+<!--    {{ message }}-->
 </body>
 </html>

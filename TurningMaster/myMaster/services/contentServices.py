@@ -1,7 +1,7 @@
 from myMaster.models import textPage
 
 def GetAllText():
-    return textPage.objects.all().values_list()
+    return textPage.objects.all()
 
 
 def SaveText(text,img):

@@ -10,27 +10,12 @@
 {% include "Secondmain.html" %}
 
 <table class="cutterTable">
+    {% for picture in img %}
     <tr>
-        <th class="title">Круглый резец правый</th>
-        <th class="title">Нейтральный резец</th>
-        <th class="title">Отрезной резец правый</th>
+        <th class="title">{{ picture.text }}</th>
     </tr>
-    {% for picture in pictures %}
     <tr>
-        <td ><img src="{% static 'img/crugliy.png' %}" alt="round cutter"></td>
-        <td><img src="{% static 'img/neitral.png' %}" alt="neutral cutter"></td>
         <td>{{ picture.img }}</td>
     </tr>
-    <tr>
-        <th class="title">Проходной резец правый</th>
-        <th class="title">Расточной резец правый</th>
-        <th class="title">Резьбовой резец правый</th>
-    </tr>
-
-    <tr>
-        <td><img src="{% static 'img/prohodnoi.png' %}" alt="through-hole cutter"></td>
-        <td><img src="{% static 'img/rastochoi.png' %}" alt="boring tool"></td>
-        <td><img src="{% static 'img/rezba.png' %}" alt="threaded cutter"></td>
-    </tr>
-
+    {% endfor %}
 </table>
