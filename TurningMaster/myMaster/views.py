@@ -37,13 +37,13 @@ def guide(request):
     return render(request,'guide.html',)
 
 
-def isValidForms(request):
-    if request.method == "POST":
-        registration = Registration(request.POST)
-        if registration.is_valid():
-            return render(request, "main.html")
-        else:
-            return render(request, "reg.html", {'form': Registration})
+# def isValidForms(request):
+#     if request.method == "POST":
+#         registration = Registration(request.POST)
+#         if registration.is_valid():
+#             return render(request, "main.html")
+#         else:
+#             return render(request, "reg.html", {'form': Registration})
 def politics(request):
     return render(request,'politics.html',)
 

@@ -52,11 +52,24 @@
     background: #7F8482;
     }
 .master{
-    position: absolute;
-    width: 687px;
-    height: 97px;
-    left: 450px;
-    top: 50px;
+/* Токарный мастер */
+
+position: absolute;
+width: 702px;
+height: 100px;
+left: 439px;
+top: -50px;
+
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 80px;
+line-height: 133%;
+text-align: center;
+color: #C4A817;
+
+-webkit-text-stroke: 2px #000000;
+text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.45);
+
 }
 .main-button{
     position: absolute;
