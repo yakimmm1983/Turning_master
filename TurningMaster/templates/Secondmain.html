@@ -23,10 +23,10 @@
 
     </div>
 
-    <form method = "post" action="{% url 'reg' %}">
-        {% csrf_token %}
+    <form method = "get" action="{% url 'reg' %}">
         <button class="reg-button" type="submit">Регистрация</button>
     </form>
+<!--    <a href="{% url 'reg' %}" class="reg-button">Регистрация </a>-->
     <form method = "post" action="{% url 'enter' %}">
         {% csrf_token %}
         <button class="vhod-button" type="submit">Вход</button>

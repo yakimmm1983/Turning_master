@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render,redirect
 from .forms import Registration,Enter
 from myMaster.services.registrService import CreateUser as CreateUsersAll
@@ -11,11 +13,14 @@ def mainRedirect(request):
 def reg(request):                                      #переход на страницу формы регистрации
     message = ""
     if request.method == 'POST':
-        nickname = request.POST.get('nickname')
-        birthday = request.POST.get('birthday')
+        nickname = request.POST.get('nickName')
+        birthday = request.POST.get('dateBirth')
+        birthday = datetime.datetime.strptime(birthday,'%d.%m.%Y')
+        print(birthday)
         reg_form = Registration(request.POST)
-        if reg_form.password1 == reg_form.password2:
-            password = request.POST.get('password')
+        print(reg_form)
+        if request.POST.get('password1')== request.POST.get('password2'):
+            password = request.POST.get('password1')
             CreateUsersAll(nickname, birthday, password)
             message = "Пользователь создан"
         else:
