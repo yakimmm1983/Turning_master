@@ -12,7 +12,7 @@
     font-size:40px;
 }
 .back-Ap{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 226px;
     left: 0px;
@@ -21,17 +21,17 @@
 }
 .cnc{
     position: absolute;
-    width: 390px;
-    height: 223px;
+    width: 27,5%;
+    height: 24,5%;
     left: 16px;
     top: -3px;
 }
 .back-Main{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 627px;
     left: 0px;
-    top: 0px;
+    top: 226px;
     background-repeat: no-repeat;
 }
 .back-Left{
@@ -44,31 +44,31 @@
     box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.33);
 }
 .back-Down{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 172px;
     left: 0px;
-    top: 0px;
+    top: 852px;
     background: #7F8482;
     }
 .master{
 /* Токарный мастер */
 
-position: absolute;
-width: 702px;
-height: 100px;
-left: 439px;
-top: -50px;
+    position: absolute;
+    width: 48,75%;
+    height: 8,20%;
+    left: 439px;
+    top: -50px;
 
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-size: 80px;
-line-height: 133%;
-text-align: center;
-color: #C4A817;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 133%;
+    text-align: center;
+    color: #C4A817;
 
--webkit-text-stroke: 2px #000000;
-text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.45);
+    -webkit-text-stroke: 2px #000000;
+    text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.45);
 
 }
 .main-button{

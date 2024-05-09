@@ -13,7 +13,10 @@ def mainRedirect(request):
 def reg(request):                                      #переход на страницу формы регистрации
     message = ""
     if request.method == 'POST':
-        nickname = request.POST.get('nickName')
+        try:
+            nickname = request.POST.get('nickName')
+        except ValueError:
+            message = "Никнейм уже существует"
         birthday = request.POST.get('dateBirth')
         birthday = datetime.datetime.strptime(birthday,'%d.%m.%Y')
         print(birthday)
@@ -27,9 +30,11 @@ def reg(request):                                      #переход на ст
             message = "Пароль не совпадает"
     registration = Registration()
     return render(request,'reg.html', {"form":registration,"message":message})
+
 def enter(request):
     enter = Enter()
     return render(request,'enter.html',{"form":enter})
+
 def catalog(request):
     return render(request,'catalog.html',)
 def info(request):

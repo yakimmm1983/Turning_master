@@ -14,5 +14,9 @@
         <button type="submit">Регистрация</button>
     </form>
 {{ message }}
+    <form action="{% url 'main' %}" >
+        {% csrf_token %}
+        <button type="submit">Вернуться на главную страницу</button>
+    </form>
 </body>
 </html>
