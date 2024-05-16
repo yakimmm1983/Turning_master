@@ -13,7 +13,7 @@
         </div>
         <button type="submit">Регистрация</button>
     </form>
-{{ message }}
+    <h3 class="message" >{{ message }}</h3>
     <form action="{% url 'main' %}" >
         {% csrf_token %}
         <button type="submit">Вернуться на главную страницу</button>

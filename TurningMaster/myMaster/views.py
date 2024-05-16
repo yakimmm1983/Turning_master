@@ -1,8 +1,9 @@
 import datetime
 
+from django.db import IntegrityError
 from django.shortcuts import render,redirect
 from .forms import Registration,Enter
-from myMaster.services.registrService import CreateUser as CreateUsersAll
+from myMaster.services.registrService import CreateUser as CreateUsersAll,GetAllUsers
 from myMaster.services.contentServices import GetAllText
 from myMaster.models import textPage
 
@@ -15,28 +16,33 @@ def reg(request):                                      #переход на ст
     if request.method == 'POST':
         try:
             nickname = request.POST.get('nickName')
-        except ValueError:
+            birthday = request.POST.get('dateBirth')
+            birthday = datetime.datetime.strptime(birthday,'%d.%m.%Y')
+            #print(birthday)
+            reg_form = Registration(request.POST)
+            #print(reg_form)
+            if request.POST.get('password1')== request.POST.get('password2'):
+                password = request.POST.get('password1')
+                CreateUsersAll(nickname, birthday, password)
+                message = "Пользователь создан"
+            else:
+                message = "Пароль не совпадает"
+        except IntegrityError:
             message = "Никнейм уже существует"
-        birthday = request.POST.get('dateBirth')
-        birthday = datetime.datetime.strptime(birthday,'%d.%m.%Y')
-        print(birthday)
-        reg_form = Registration(request.POST)
-        print(reg_form)
-        if request.POST.get('password1')== request.POST.get('password2'):
-            password = request.POST.get('password1')
-            CreateUsersAll(nickname, birthday, password)
-            message = "Пользователь создан"
-        else:
-            message = "Пароль не совпадает"
     registration = Registration()
     return render(request,'reg.html', {"form":registration,"message":message})
 
 def enter(request):
+
     enter = Enter()
+
     return render(request,'enter.html',{"form":enter})
 
 def catalog(request):
-    return render(request,'catalog.html',)
+    img = GetAllText()
+    for im in img:
+        print(im.img)
+    return render(request, 'catalog.html', {'img': img})
 def info(request):
     return render(request,'info.html',)
 def process(request):
@@ -69,7 +75,7 @@ def politics(request):
 #     return render(request,'CreateUser.html',)
 
 
-def GetAllImg(request):
-    img = GetAllText()
-    return render(request,'catalog.html',{'img':img})
+# def GetAllImg(request):
+#     img = GetAllText()
+#     return render(request,'catalog.html',{'img':img})
 
