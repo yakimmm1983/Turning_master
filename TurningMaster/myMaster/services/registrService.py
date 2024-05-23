@@ -3,6 +3,8 @@ from myMaster.models import regUser
 
 def GetAllUsers():
     return regUser.objects.all()
+def GetUserByNickName(nickname:str):
+    return regUser.objects.get(nickname=nickname)
 def SaveUser(name,data,password):
     user = regUser()
     user.nickname = name

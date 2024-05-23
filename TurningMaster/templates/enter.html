@@ -6,15 +6,20 @@
 </head>
 <body>
     <h3>Вход</h3>
-<form method = "post" action="{% url 'main' %}">
+    <form method = "post" >
         {% csrf_token %}
 
         <div>
         {{ form.as_p }}
         </div>
-
         <button type="submit">Вход</button>
-</form>
+    </form>
+        <h3 class="message" >{{ message }}</h3>
+    <form action="{% url 'main' %}" >
+        {% csrf_token %}
+        <button type="submit">Вернуться на главную страницу</button>
+    </form>
+
 </body>
 </html>
 

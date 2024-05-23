@@ -3,9 +3,9 @@ import datetime
 from django.db import IntegrityError
 from django.shortcuts import render,redirect
 from .forms import Registration,Enter
-from myMaster.services.registrService import CreateUser as CreateUsersAll,GetAllUsers
+from myMaster.services.registrService import CreateUser as CreateUsersAll,GetAllUsers,GetUserByNickName
 from myMaster.services.contentServices import GetAllText
-from myMaster.models import textPage
+# from myMaster.models import GetAllUsers
 
 def main(request):
     return render(request,'main.html',)
@@ -33,8 +33,22 @@ def reg(request):                                      #переход на ст
     return render(request,'reg.html', {"form":registration,"message":message})
 
 def enter(request):
-
     enter = Enter()
+    if request.method == 'POST':
+        message = ""
+        try:
+            user = GetUserByNickName(request.POST.get('nickName'))
+        except :
+            message = "Ваш никнейм не существует или введен неправильно"
+            return render(request, 'enter.html', {"form": enter, 'message': message})
+
+        if user.password == request.POST.get('password'):
+            message = "Ваш пароль не существует или введен неправильно"
+        else:
+
+            message = "Проверьте ваш никнейм или зарегистрируйтесь"
+
+        return render(request, 'enter.html', {"form": enter, 'message': message})
 
     return render(request,'enter.html',{"form":enter})
 
