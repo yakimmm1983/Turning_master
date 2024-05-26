@@ -1,15 +1,20 @@
 
-.text{
-    position: absolute;
-    left: 500px;
-    top: 100px;
-    font-size:50px;
-}
+
+
 .text22{
     position: absolute;
-    left: 500px;
-    top: 150px;
-    font-size:40px;
+    left: 330px;top: 50px;
+    text-indent: 25px;
+    font-size:20px;
+    margin-right: 600px;
+    text-align:justify;
+
+}
+.mainImg{
+    position:absolute;
+    top:80px;left:520px;
+    width:550px;
+    float:right;
 }
 .back-Ap{
     position: absolute;
@@ -18,6 +23,7 @@
     left: 0px;
     top: 0px;
     background-repeat: no-repeat;
+
 }
 .cnc{
     position: absolute;
@@ -111,6 +117,8 @@
 .reg-button:hover{
     background-color:#C4F1DB;
 }
+
+
 .vhod-button{
     position: absolute;
     font-style: normal;
@@ -275,11 +283,23 @@ background: #E6E6E6;
     top:250px;left: 500px;
     width: 600px;
 }
+
 .machineCNC{
+    position: relative;
+    left: 10px;
+    width: 400px;
+    float:left;
+    margin: 0px 30px 0px 0px;
+    }
+.textMashine{
     position: absolute;
-    top:330px;left: 500px;
-    width: 700px;
+    top:250px;left: 300px;
+    height: 600px;
+    overflow-y: scroll;
+    text-indent: 25px;
 }
+
+
 .info{
     position: absolute;
     top:240px;left: 400px;
@@ -305,6 +325,31 @@ background: #E6E6E6;
     box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.7);
     border-radius: 20px
 }
-.message{
-    color: #FF0000;
+.spisok{
+    position: absolute;
+    top: 250px; left: 320px;
+    text-indent: 25px;
+
 }
+.link-spisok{
+    position: absolute;
+    top: 330px; left: 330px;
+    font-size:20px;
+}
+.sizeLink{
+    font-weight: bold;
+    font-size:25px;
+}
+
+a{
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+}
+a:visited {
+    color: black; /* Цвет посещённой ссылки */
+}
+a:hover {
+    color: blue; /* Цвет ссылки при наведении */
+    text-decoration: underline; /* Добавляем подчёркивание */
+}
+
+

@@ -10,15 +10,25 @@
 {% include "Secondmain.html" %}
 
 <table class="cutterTable">
-    {% for picture in img %}
-    <tr>
-        <th class="title">{{ picture.text }}</th>
-    </tr>
-    <tr>
 
-        <td><img src="C:\Users\student\PycharmProjects\Turning_master\TurningMaster\static\{{ picture.img }}"></td>
+    <tr>
+        <th class="title">Резец круглый</th>
+        <th class="title">Резец нейтральный</th>
+        <th class="title">Резец отрезной</th>
     </tr>
-    {% endfor %}
+    <tr>
+        <td><img src="{% static 'img/crugliy.png'%}" ></td>
+        <td><img src="{% static 'img/neitral.png'%}" ></td>
+        <td><img src="{% static 'img/otreznoi.png'%}" ></td>
+    </tr>
+    <tr>
+        <th class="title">Резец общего точения</th>
+        <th class="title">Резец расточной</th>
+        <th class="title">Резец резьбовой</th>
+    </tr>
+    <tr>
+        <td><img src="{% static 'img/prohodnoi.png'%}" ></td>
+        <td><img src="{% static 'img/rastochnoi.png'%}" ></td>
+        <td><img src="{% static 'img/rezba.png'%}" ></td>
+    </tr>
 </table>
-
-

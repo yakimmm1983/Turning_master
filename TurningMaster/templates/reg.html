@@ -5,18 +5,21 @@
     <title>Регистрация</title>
 </head>
 <body>
-    <h3>Регистрация пользователя:</h3>
-    <form method = "post" >
-        {% csrf_token %}
-        <div>
-        {{ form.as_p }}
-        </div>
-        <button type="submit">Регистрация</button>
-    </form>
-    <h3 class="message" >{{ message }}</h3>
-    <form action="{% url 'main' %}" >
-        {% csrf_token %}
-        <button type="submit">Вернуться на главную страницу</button>
-    </form>
+
+        <h3>Регистрация пользователя:</h3>
+        <form method = "post" >
+            {% csrf_token %}
+            <div>
+            {{ form.as_p }}
+            </div>
+            <button type="submit">Регистрация</button>
+        </form>
+        <h3 class="message" >{{ message }}</h3>
+        <form action="{% url 'main' %}" >
+            {% csrf_token %}
+            <button type="submit">Вернуться на главную страницу</button>
+        </form>
+
+
 </body>
 </html>

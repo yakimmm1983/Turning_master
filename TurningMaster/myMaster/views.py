@@ -76,6 +76,10 @@ def guide(request):
 #             return render(request, "reg.html", {'form': Registration})
 def politics(request):
     return render(request,'politics.html',)
+def bazaHTML(request):
+    return render(request,'baza.html',)
+def tochenieHTML(request):
+    return render(request,'tochenie.html',)
 
 # def CreateUser(request):
 #     if request.method == 'POST':

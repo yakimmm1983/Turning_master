@@ -9,7 +9,12 @@
 <body>
     {% include "Secondmain.html" %}
 
-    <img class="process" src="{% static 'img/Process.png' %}">
+    <div class="spisok">
+        <ul class="sizeLink">
+            <li><a href="{% url 'baza' %}" >Базы и базирование.Основные понятия.Виды баз.</a></li><br>
+            <li><a href="{% url 'tochenie' %}">Точность обработки</a></li><br>
+        </ul>
+    </div>
 
 </body>
 </html>
